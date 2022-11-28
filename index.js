@@ -73,11 +73,11 @@
   }
   
   const depositarDinero = () => {
-    let dineroADepositar = parseInt(prompt("Cuanto dinero desea depositar?"));
+    let dineroADepositar = parseInt(prompt("¿Cuanto dinero desea depositar?"));
     if(dineroADepositar > 0) {
       usuarioLogIn.dineroEnElBanco += dineroADepositar;
       const fecha = new Date();
-      usuarioLogIn.agregarMovimiento(new Movimientos(dineroADepositar, 'Deposito', fecha));
+      usuarioLogIn.agregarMovimiento(new Movimientos(dineroADepositar, 'Depósito', fecha));
       alert(`Su nuevo saldo es de ${usuarioLogIn.dineroEnElBanco}`)
     } else {
       alert('El valor es incorrecto.')
@@ -90,7 +90,7 @@
     if(resultado) {
       const fecha = new Date();
       usuarioLogIn.agregarMovimiento(new Movimientos(dineroATrasferir, 'Transferencia', fecha));
-      alert(`La transferencia se realizo con exito, su nuevo saldo es de ${diusuarioLogIn.dineroneroDelUsuario}`);
+      alert(`La transferencia se realizó con éxito, su nuevo saldo es de ${diusuarioLogIn.dineroneroDelUsuario}`);
     }
   }
   
